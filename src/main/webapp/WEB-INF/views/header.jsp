@@ -17,10 +17,10 @@
 <nav>
     <ul>
         <li><a href="/registration">고객등록</a></li>
-        <li><a href="/registration">고객 목록 조회/수정</a></li>
-        <li><a href="#">고객대여리스트</a></li>
-        <li><a href="#">고객 대여금 조회</a></li>
-        <li><a href="#">홈으로</a></li>
+        <li><a href="/customer">고객 목록 조회/수정</a></li>
+        <li><a href="/rentlist">고객대여리스트</a></li>
+        <li><a href="/payment">고객 대여금 조회</a></li>
+        <li><a href="/">홈으로</a></li>
 
     </ul>
 </nav>
