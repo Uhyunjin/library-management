@@ -6,20 +6,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
 <%@ include file="header.jsp"%>
-<h1>Registraion Page</h1>
+<h1>고객 등록 화면</h1>
 <div>
-    <form>
+    <form method="post" action="<c:url value="/save"/>">
         <div>
+            <label>고객번호</label>
             <input type="text" id="number" name="number">
         </div>
     </form>
-    <button>등록</button>
+    <button type="submit">등록</button>
 </div>
 </body>
 </html>
