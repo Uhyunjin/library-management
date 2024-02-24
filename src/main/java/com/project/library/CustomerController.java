@@ -17,13 +17,13 @@ public class CustomerController {
         return "customerList";
     }
 
-    @RequestMapping(value = "/payment", method = RequestMethod.GET)
-    public String payment(String[] args) {
-        return "payment";
-    }
-
-    @RequestMapping(value = "/rent", method = RequestMethod.GET)
-    public String rentList(String[] args) {
-        return "rentList";
-    }
+//    @RequestMapping(value = "/payment", method = RequestMethod.GET)
+//    public String payment(String[] args) {
+//        return "payment";
+//    }
+//
+//    @RequestMapping(value = "/rent", method = RequestMethod.GET)
+//    public String rentList(String[] args) {
+//        return "rentList";
+//    }
 }
