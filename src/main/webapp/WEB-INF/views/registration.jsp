@@ -15,13 +15,13 @@
 <%@ include file="header.jsp"%>
 <h1>고객 등록 화면</h1>
 <div>
-    <form method="post" action="<c:url value="/save"/>">
+    <form method="post" action="/save">
         <div>
             <label>고객번호</label>
             <input type="text" id="number" name="number">
         </div>
-    </form>
     <button type="submit">등록</button>
+    </form>
 </div>
 </body>
 </html>
