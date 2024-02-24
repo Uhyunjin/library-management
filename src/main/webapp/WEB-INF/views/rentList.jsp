@@ -11,6 +11,7 @@
     <title>rentlist</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <h1>Rent List Page</h1>
 </body>
 </html>

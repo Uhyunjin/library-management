@@ -11,6 +11,7 @@
     <title>payment</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <h1>Payment Page</h1>
 </body>
 </html>

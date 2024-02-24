@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <h1>Registraion Page</h1>
 </body>
 </html>

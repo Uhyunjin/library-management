@@ -11,6 +11,7 @@
     <title>customerList</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <h1>Customer List Page</h1>
 </body>
 </html>
