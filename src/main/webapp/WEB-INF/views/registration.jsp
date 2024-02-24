@@ -20,6 +20,22 @@
             <label>고객번호</label>
             <input type="text" id="number" name="number">
         </div>
+        <div>
+            <label>고객이름</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label>전화번호</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+        <div>
+            <label>이메일</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div>
+            <label>고객등급(P/S/G)</label>
+            <input type="text" id="grade" name="grade">
+        </div>
     <button type="submit">등록</button>
     </form>
 </div>

@@ -13,6 +13,10 @@
 <body>
 <%@ include file="header.jsp"%>
 <h1>form save check</h1>
-<h1>고객 번호 : ${param.number}</h1>
+<h1>고객번호 : ${param.number}</h1>
+<h1>고객이름 : ${param.name}</h1>
+<h1>전화번호 : ${param.phone}</h1>
+<h1>이메일 : ${param.email}</h1>
+<h1>고객등급(P/S/G) : ${param.grade}</h1>
 </body>
 </html>
