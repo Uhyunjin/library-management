@@ -13,5 +13,13 @@
 <body>
 <%@ include file="header.jsp"%>
 <h1>Registraion Page</h1>
+<div>
+    <form>
+        <div>
+            <input type="text" id="number" name="number">
+        </div>
+    </form>
+    <button>등록</button>
+</div>
 </body>
 </html>
