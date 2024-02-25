@@ -3,6 +3,7 @@ package com.project.library;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -12,14 +13,15 @@ import java.util.List;
 public class ExDAO {
     ApplicationContext ac = new GenericXmlApplicationContext("file:src/main/webapp/WEB-INF/spring/**/root-context.xml");
     DataSource ds = ac.getBean(DataSource.class);
-//    public static void main(String[] args) {
-//        ExDAO ex = new ExDAO();
-//        List<ExDTO> list = ex.selectEx();
-//        for (ExDTO tmp:list) {
-//            System.out.println(tmp.getId() + "|" + tmp.getName());
-//        }
-//        System.out.println(list);
-//    }
+    public static void main(String[] args) {
+        ExDAO ex = new ExDAO();
+        List<ExDTO> list = ex.selectEx();
+        for (ExDTO tmp:list) {
+            System.out.println(tmp.getId() + "|" + tmp.getName());
+        }
+        System.out.println(list);
+    }
+    // 이거는 실행 잘 됌
 
     public List<ExDTO> selectEx() {
         ExDTO ex = null;
