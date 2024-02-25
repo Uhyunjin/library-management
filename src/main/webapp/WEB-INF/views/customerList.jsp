@@ -13,5 +13,6 @@
 <body>
 <%@ include file="header.jsp"%>
 <h1>Customer List Page</h1>
+<h2>${m.list}</h2>
 </body>
 </html>
