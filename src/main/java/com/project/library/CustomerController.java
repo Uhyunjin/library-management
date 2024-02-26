@@ -38,7 +38,7 @@ public class CustomerController {
     }
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(int cust_no, String cust_name, String phone, String join_date, String cust_email, String grade) {
-        String sql = "insert into tbl_customer(cust_no, cust_name, phone, join_date, cust_email, grade) values(?, ?, ?, ?, ?, ?)";
+        String sql = "insert into tbl_customer(cust_no, cust_name, phone, now(), cust_email, grade) values(?, ?, ?, ?, ?, ?)";
         Object[] params = {cust_no, cust_name, phone, join_date, cust_email, grade};
         jdbcTemplate.update(sql, params);
         System.out.println(params);
