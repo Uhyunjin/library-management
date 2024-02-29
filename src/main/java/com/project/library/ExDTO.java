@@ -2,7 +2,6 @@ package com.project.library;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class ExDTO {
     private int id;
     private String name;
