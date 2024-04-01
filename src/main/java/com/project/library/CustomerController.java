@@ -12,6 +12,9 @@ import java.util.List;
 @Controller
 public class CustomerController {
 
+    @Autowired
+    ExDAO exDAO;
+
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(String[] args) {
         return "registration";
@@ -20,8 +23,8 @@ public class CustomerController {
     @RequestMapping(value = "/customer", method = RequestMethod.GET)
     public String customer(Model m) {
 
-//        List<ExDTO> ex = exDAO.selectAll();
-//        m.addAttribute("ex", ex);
+        List<ExDTO> ex = exDAO.selectAll();
+        m.addAttribute("ex", ex);
         return "customerList";
     }
 

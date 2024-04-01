@@ -20,12 +20,9 @@ import javax.sql.DataSource;
  */
 @Controller
 public class HomeController {
-	@Inject
-	DataSource ds;
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home() throws	Exception{
-		Connection conn = ds.getConnection();
-		System.out.println("DB 연결 성공 : "+conn);
 		
 		return "index";
 	}
