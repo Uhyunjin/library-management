@@ -29,7 +29,7 @@ public class ExDAO {
     //mapper위치 체크하고 수정하기
         
     @Override
-    public List<BoardDto> selectAll() throws Exception {
+    public List<ExDTO> selectAll() throws Exception {
         return session.selectList(namespace+"selectAll");
     }
 }
