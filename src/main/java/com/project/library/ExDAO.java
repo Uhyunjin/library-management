@@ -23,11 +23,10 @@ public class ExDAO {
 
     @Autowired
     DataSource ds;
-
-    public ExDTO selectAll() {
         
     private SqlSession session;
-    private static String namespace = "com.fastcampus.ch4.dao.BoardMapper.";
+    private static String namespace = "com.fastcampus.project.library.ExMapper.";
+    //mapper위치 체크하고 수정하기
         
     @Override
     public List<BoardDto> selectAll() throws Exception {
