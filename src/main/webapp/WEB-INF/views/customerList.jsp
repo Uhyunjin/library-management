@@ -19,11 +19,12 @@
         <th>id</th>
         <th>name</th>
     </tr>
-        <c:forEach items="${list}" var="m"/>
+        <c:forEach items="${list}" var="m">
     <tr>
-            <tb>${m.id}</tb>
-            <tb>${m.name}</tb>
+            <td>${m.id}</td>
+            <td>${m.name}</td>
     </tr>
+        </c:forEach>>
 </table>
 </body>
 </html>

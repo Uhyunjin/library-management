@@ -30,7 +30,7 @@ public class CustomerController {
 //        return "customerList";
 //    }
 
-    @GetMapping("/list")
+    @GetMapping("/customer")
     public String list(Model m, HttpServletRequest request) {
         try {
             List<ExDTO> list = exDAO.selectAll();
