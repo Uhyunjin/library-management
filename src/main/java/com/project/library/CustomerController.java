@@ -35,6 +35,7 @@ public class CustomerController {
         try {
             List<ExDTO> list = exDAO.selectAll();
             m.addAttribute("list", list);
+            System.out.println(list);
             
         } catch (Exception e) {
             e.printStackTrace();

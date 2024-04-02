@@ -4,7 +4,7 @@
 
 <mapper namespace="com.project.library.exMapper">
 
-    <select id="selectAll" parameterType="String" resultType="ExDTO">
+    <select id="selectAll" resultType="ExDTO">
         select * from ex
     </select>
 
