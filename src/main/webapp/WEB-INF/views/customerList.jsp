@@ -14,7 +14,7 @@
 <body>
 <%@ include file="header.jsp"%>
 <h1>Customer List Page</h1>
-<table>
+<table border="1">
     <tr>
         <th>id</th>
         <th>name</th>
@@ -24,7 +24,7 @@
             <td>${m.id}</td>
             <td>${m.name}</td>
     </tr>
-        </c:forEach>>
+        </c:forEach>
 </table>
 </body>
 </html>

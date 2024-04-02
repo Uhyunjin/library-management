@@ -22,14 +22,6 @@ public class CustomerController {
         return "registration";
     }
 
-//    @RequestMapping(value = "/customer", method = RequestMethod.GET)
-//    public String customer(Model m) {
-//
-//        List<ExDTO> ex = exDAO.selectAll();
-//        m.addAttribute("ex", ex);
-//        return "customerList";
-//    }
-
     @GetMapping("/customer")
     public String list(Model m, HttpServletRequest request) {
         try {
