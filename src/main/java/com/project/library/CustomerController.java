@@ -2,10 +2,12 @@ package com.project.library;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import java.util.List;
 
@@ -20,18 +22,18 @@ public class CustomerController {
         return "registration";
     }
 
-    @RequestMapping(value = "/customer", method = RequestMethod.GET)
-    public String customer(Model m) {
-
-        List<ExDTO> ex = exDAO.selectAll();
-        m.addAttribute("ex", ex);
-        return "customerList";
-    }
+//    @RequestMapping(value = "/customer", method = RequestMethod.GET)
+//    public String customer(Model m) {
+//
+//        List<ExDTO> ex = exDAO.selectAll();
+//        m.addAttribute("ex", ex);
+//        return "customerList";
+//    }
 
     @GetMapping("/list")
     public String list(Model m, HttpServletRequest request) {
         try {
-            List<ExDto> list = ExDAO.selectAll();
+            List<ExDTO> list = exDAO.selectAll();
             m.addAttribute("list", list);
             
         } catch (Exception e) {

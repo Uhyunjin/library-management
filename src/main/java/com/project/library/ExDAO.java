@@ -22,13 +22,11 @@ import java.sql.SQLException;
 public class ExDAO {
 
     @Autowired
-    DataSource ds;
-        
+//    DataSource ds;
     private SqlSession session;
-    private static String namespace = "com.fastcampus.project.library.ExMapper.";
+    private static String namespace = "com.project.library.exMapper.";
     //mapper위치 체크하고 수정하기
         
-    @Override
     public List<ExDTO> selectAll() throws Exception {
         return session.selectList(namespace+"selectAll");
     }
