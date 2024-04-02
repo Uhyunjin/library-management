@@ -28,6 +28,21 @@ public class CustomerController {
         return "customerList";
     }
 
+    @GetMapping("/list")
+    public String list(Model m, HttpServletRequest request) {
+        try {
+            List<ExDto> list = ExDAO.selectAll();
+            m.addAttribute("list", list);
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            m.addAttribute("msg", "LIST_ERR");
+            // m.addAttribute("totalCnt", 0);
+        }
+
+        return "customerList";
+    }
+
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
         return "save";
