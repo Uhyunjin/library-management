@@ -9,6 +9,10 @@ public class RentDto {
     private int rent_price;
     private Date rent_date;
 
+    private RentDto() {
+
+    }
+
     public Integer getRent_no() {
         return rent_no;
     }

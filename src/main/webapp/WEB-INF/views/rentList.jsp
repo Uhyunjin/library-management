@@ -13,5 +13,23 @@
 <body>
 <%@ include file="header.jsp"%>
 <h1>Rent List Page</h1>
+<table border="1">
+    <tr>
+        <th>고객번호</th>
+        <th>대여번호</th>
+        <th>책번호</th>
+        <th>대여금액</th>
+        <th>대여일</th>
+    </tr>
+    <c:forEach items="${list}" var="rent">
+        <tr>
+            <td>${rent.cust_no}</td>
+            <td>${rent.rent_no}</td>
+            <td>${rent.book_code}</td>
+            <td>${rent.rent_price}</td>
+            <td>${rent.rent_date}</td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

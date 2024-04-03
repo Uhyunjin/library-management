@@ -32,7 +32,7 @@ public class CustomerController {
 //            List<ExDTO> list = exDAO.selectAll();
             List<CustomerDto> list = customerDao.selectAll();
             m.addAttribute("list", list);
-            System.out.println(list);
+//            System.out.println(list);
             
         } catch (Exception e) {
             e.printStackTrace();
