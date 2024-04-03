@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.project.libarary.customerMapper">
-        <select id="selectAll" resultType="CustomerDao">
+        <select id="selectAll" resultType="CustomerDto">
                 select cust_no, cust_name, phone, join_date, cust_email, grade
                 from tbl_customer
         </select>
