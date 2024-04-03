@@ -1,0 +1,23 @@
+ul > li {
+    color: lightgray;
+    height : 100%;
+    width:90px;
+    display:inline-block;
+    align-items: center;
+}
+
+ul > li > a {
+    color: lightgray;
+    margin:auto;
+    padding: 10px;
+    font-size:20px;
+    align-items: center;
+}
+
+nav{
+    background-color: #30426E;
+}
+
+h1{
+    background-color: #30426E;
+}

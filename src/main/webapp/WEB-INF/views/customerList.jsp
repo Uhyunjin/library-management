@@ -10,6 +10,8 @@
 <html>
 <head>
     <title>customerList</title>
+    <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">
+
 </head>
 <body>
 <%@ include file="header.jsp"%>
