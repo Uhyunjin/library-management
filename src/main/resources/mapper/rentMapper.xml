@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.project.library.customerMapper">
+<mapper namespace="com.project.library.rentMapper">
         <select id="selectAll" resultType="CustomerDto">
-                select cust_no, cust_name, phone, join_date, cust_email, grade
-                from customer
+                select cust_no, rent_no, book_code, rent_price, rent_date
+                from rent
         </select>
 </mapper>

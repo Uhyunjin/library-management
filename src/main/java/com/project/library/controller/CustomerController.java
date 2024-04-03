@@ -1,5 +1,7 @@
 package com.project.library.controller;
+import com.project.library.dao.CustomerDao;
 import com.project.library.dao.ExDAO;
+import com.project.library.domain.CustomerDto;
 import com.project.library.domain.ExDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,8 @@ public class CustomerController {
 
     @Autowired
     ExDAO exDAO;
+    @Autowired
+    CustomerDao customerDao;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(String[] args) {
@@ -23,9 +27,10 @@ public class CustomerController {
     }
 
     @GetMapping("/customer")
-    public String list(Model m, HttpServletRequest request) {
+    public String customer_list(Model m, HttpServletRequest request) {
         try {
-            List<ExDTO> list = exDAO.selectAll();
+//            List<ExDTO> list = exDAO.selectAll();
+            List<CustomerDto> list = customerDao.selectAll();
             m.addAttribute("list", list);
             System.out.println(list);
             
@@ -34,12 +39,12 @@ public class CustomerController {
             m.addAttribute("msg", "LIST_ERR");
             // m.addAttribute("totalCnt", 0);
         }
-
         return "customerList";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
+
         return "save";
     }
     @RequestMapping(value = "/registration", method = RequestMethod.POST)

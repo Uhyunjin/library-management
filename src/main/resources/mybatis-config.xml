@@ -4,6 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
+        <typeAlias alias="CustomerDto" type="com.project.library.domain.CustomerDto"/>
+        <typeAlias alias="RentDto" type="com.project.library.domain.RentDto"/>
         <typeAlias alias="ExDTO" type="com.project.library.domain.ExDTO"/>
     </typeAliases>
 </configuration>

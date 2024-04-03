@@ -21,8 +21,15 @@
     </tr>
         <c:forEach items="${list}" var="m">
     <tr>
-            <td>${m.id}</td>
-            <td>${m.name}</td>
+        <td>${m.cust_no}</td>
+        <td>${m.cust_name}</td>
+        <td>${m.phone}</td>
+<%--        <td>${m.join_date}</td>--%>
+        <td>${m.cust_email}</td>
+        <td>${m.grade}</td>
+<%--                <td>${m.id}</td>--%>
+<%--                <td>${m.name}</td>--%>
+
     </tr>
         </c:forEach>
 </table>
