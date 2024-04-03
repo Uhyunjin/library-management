@@ -18,6 +18,9 @@
     <tr>
         <th>id</th>
         <th>name</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>등급</th>
     </tr>
         <c:forEach items="${list}" var="m">
     <tr>
