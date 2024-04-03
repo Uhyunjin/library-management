@@ -1,6 +1,6 @@
-package com.fastcampus.ch4.domain;
+package com.project.library;
 
-import java.util.*;
+import java.util.Date;
 
 public class CustomerDto {
     private Integer cust_no;
