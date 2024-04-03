@@ -1,0 +1,12 @@
+package com.fastcampus.ch4.domain;
+
+import java.util.*;
+
+public class CustomerDto {
+    private Integer cust_no;
+    private String cust_name;
+    private String phone;
+    private Date join_date;
+    private String cust_email;
+    private String grade;
+}
