@@ -25,7 +25,7 @@ public class RentController {
     public String rentList(Model m) {
         try {
         List<RentDto> list = rentDao.selectAll();
-            m.addAttribute(list);
+            m.addAttribute("list", list);
             System.out.println(list);
 
         } catch (Exception e) {

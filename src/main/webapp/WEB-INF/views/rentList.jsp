@@ -23,8 +23,8 @@
     </tr>
     <c:forEach items="${list}" var="rent">
         <tr>
-            <td>${rent.cust_no}</td>
             <td>${rent.rent_no}</td>
+            <td>${rent.cust_no}</td>
             <td>${rent.book_code}</td>
             <td>${rent.rent_price}</td>
             <td>${rent.rent_date}</td>
