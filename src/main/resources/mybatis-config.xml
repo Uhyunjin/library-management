@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="ExDTO" type="com.project.library.ExDTO"/>
+        <typeAlias alias="ExDTO" type="com.project.library.domain.ExDTO"/>
     </typeAliases>
 </configuration>
 

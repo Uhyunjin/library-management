@@ -1,5 +1,7 @@
 package com.project.library;
 
+import com.project.library.dao.ExDAO;
+import com.project.library.domain.ExDTO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

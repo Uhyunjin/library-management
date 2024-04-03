@@ -1,4 +1,4 @@
-package com.project.library;
+package com.project.library.domain;
 
 import java.util.Date;
 

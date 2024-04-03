@@ -1,4 +1,4 @@
-package com.project.library;
+package com.project.library.domain;
 
 import org.springframework.stereotype.Component;
 
@@ -12,7 +12,7 @@ public class ExDTO {
 
     @Override
     public String toString() {
-        return "com.project.library.ExDTO{" +
+        return "com.project.library.domain.ExDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
