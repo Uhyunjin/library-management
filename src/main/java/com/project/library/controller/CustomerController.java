@@ -21,8 +21,9 @@ public class CustomerController {
     @Autowired
     CustomerDao customerDao;
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @GetMapping("/registration")
     public String registration(String[] args) {
+        m.addAttribute("mode", "new");
         return "registration";
     }
 
