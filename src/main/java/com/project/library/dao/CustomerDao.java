@@ -19,8 +19,8 @@ public class CustomerDao {
         return session.selectList(namespace + "selectAll");
     }
 
-    public int insertUser() throws Exception{
-        return session.selectList(namespace + "insertCustomer");
+    public int insertUser(CustomerDto customerDto) throws Exception{
+        return session.selectList(namespace + "insertCustomer", customerDto);
     }
 
 
