@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,20 +22,25 @@ public class CustomerController {
     @Autowired
     CustomerDao customerDao;
 
-    @GetMapping("/registration")
-    public String registration(String[] args) {
-        m.addAttribute("mode", "new");
-        return "registration";
+//    @GetMapping("/registration")
+//    public String registration(Model m) {
+//        m.addAttribute("mode", "new");
+//        return "registration";
+//    }
+
+    @GetMapping("/")
+    public String index(){
+        return "index";
     }
 
-    @GetMapping("/customer")
-    public String customer_list(Model m, HttpServletRequest request) {
+    @RequestMapping(value = "/customer", method = RequestMethod.GET)
+    public String customerList(Model m, HttpServletRequest request) {
         try {
 //            List<ExDTO> list = exDAO.selectAll();
             List<CustomerDto> list = customerDao.selectAll();
             m.addAttribute("list", list);
 //            System.out.println(list);
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             m.addAttribute("msg", "LIST_ERR");
@@ -43,30 +49,26 @@ public class CustomerController {
         return "customerList";
     }
 
-    @GetMapping("/edit")
-    public String customer_edit(Model m, HttpServletRequest request) {
-        try {
-            CustomerDto customerDto = customerDao.selectId();
-            m.addAttribute(customerDto);
-        } catch (Exception e) {
-        }
-        return "registration";
-    }
-    @PostMapping("/edit")
-    public String customer_edit() {
-        try {
-        } catch (Exception e) {
-        }
-        return "registration";
-    } //집에서 수정
+//    @GetMapping("/edit")
+//    public String customerEdit(Model m, HttpServletRequest request, Integer cust_no) {
+//        try {
+//            CustomerDto customerDto = customerDao.selectId(cust_no);
+//            m.addAttribute(customerDto);
+//        } catch (Exception e) {
+//        }
+//        return "registration";
+//    }
+//    @PostMapping("/edit")
+//    public String customerEditPost() {
+//        try {
+//        } catch (Exception e) {
+//        }
+//        return "registration";
+//    } //집에서 수정
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String save() {
-
-        return "save";
-    }
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String registration() {
-        return "registration";
-    }
+//    @RequestMapping(value = "/save", method = RequestMethod.POST)
+//    public String save() {
+//
+//        return "save";
+//    }
 }
