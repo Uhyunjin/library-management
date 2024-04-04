@@ -42,6 +42,16 @@ public class CustomerController {
         return "customerList";
     }
 
+    @GetMapping("/edit")
+    public String customer_edit(Model m, HttpServletRequest request) {
+        try {
+            CustomerDto customerDto = customerDao.selectId();
+            m.addAttribute(customerDto);
+        } catch (Exception e) {
+        }
+        return "registration";
+    }
+
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
 
