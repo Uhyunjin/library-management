@@ -41,9 +41,28 @@
       <input type="submit" id="writeBtn">등록</input>
     </c:if>
     <c:if test="${mode ne 'new'}">
-      <button type="button" id="writeNewBtn">수정</button>
+      <button type="button" id="editBtn">수정</button>
     </c:if>
     </form>
 </div>
+<script>
+  $(document).ready(function(){
+    let formCheck = function() {
+      let form = document.getElementById("form");
+      if(form.cust_name.value=="") {
+        alert("제목을 입력해 주세요.");
+        form.title.focus();
+        return false;
+      }
+
+    $("#editBtn").on("click", function(){
+      let form = $("#form");
+      form.attr("action", "<c:url value='/edit'/>");
+      form.attr("method", "post");
+
+      if(formCheck())
+        form.submit();
+    });
+</script>
 </body>
 </html>
