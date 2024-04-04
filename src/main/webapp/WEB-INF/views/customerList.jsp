@@ -27,7 +27,7 @@
     </tr>
         <c:forEach items="${list}" var="m">
     <tr>
-        <td><a href="/registration">${m.cust_no}</a></td>
+        <td><a href="/edit?cust_no=${customerDto.cust_no}">${m.cust_no}</a></td>
         <td>${m.cust_name}</td>
         <td>${m.phone}</td>
 <%--        <td>${m.join_date}</td>--%>
