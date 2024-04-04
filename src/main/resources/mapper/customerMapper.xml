@@ -7,4 +7,22 @@
                 select cust_no, cust_name, phone, join_date, cust_email, grade
                 from customer
         </select>
+
+        <select id="selectId" parameterType="int" resultType="CustomerDto">
+                select cust_no, cust_name, phone, join_date, cust_email, grade
+                from customer
+                where cust_no=id
+        </select>
+
+        <delete id="deleteAll">
+                delete
+                from customer
+        </delete>
+        
+        <delete id="deleteId" parameterType="int">
+                delete
+                from customer
+                where cust_no=id
+        </delete>
+        
 </mapper>
