@@ -23,6 +23,10 @@ public class CustomerDao {
         return session.selectOne(namespace + "selectId", id);
     }
 
+    public int updateCust(CustomerDto customerDto){
+        return session.selectOne(namespace+"updateCustomer", customerDto);
+    }
+
 //    public int insertUser(CustomerDto customerDto) throws Exception{
 //        return session.selectList(namespace + "insertCustomer", customerDto);
 //    }

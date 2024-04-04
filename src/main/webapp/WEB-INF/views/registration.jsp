@@ -48,21 +48,24 @@
 <script>
   $(document).ready(function(){
     let formCheck = function() {
-      let form = document.getElementById("form");
-      if(form.cust_name.value=="") {
-        alert("제목을 입력해 주세요.");
-        form.title.focus();
-        return false;
-      }
+        let form = document.getElementById("form");
+        if (form.cust_name.value == "") {
+            alert("제목을 입력해 주세요.");
+            form.title.focus();
+            return false;
+        }
 
-    $("#editBtn").on("click", function(){
-      let form = $("#form");
-      form.attr("action", "<c:url value='/edit'/>");
-      form.attr("method", "post");
+        $("#editBtn").on("click", function () {
+            let form = $("#form");
+            form.attr("action", "<c:url value='/edit/${customerDto.cust_no}'/>");
+            form.attr("method", "post");
 
-      if(formCheck())
-        form.submit();
-    });
+            if (formCheck())
+                form.submit();
+        });
+    }
+  });
 </script>
+<%@include file="footer.jsp"%>
 </body>
 </html>

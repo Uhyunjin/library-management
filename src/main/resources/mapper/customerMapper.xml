@@ -29,5 +29,15 @@
                 insert into customer
                 values (#{cust_no}, #{cust_name},#{phone},#{join_date},#{cust_email},#{grade})
         </insert>
+
+        <update id="updateCustomer" parameterType="CustomerDto">
+                update customer
+                set cust_name = #{cust_name},
+                    phone = #{phone},
+                    cust_email = #{cust_email},
+                    cust_name = #{},
+                    grade = #{grade}
+                where cust_no = #{cust_no}
+        </update>
         
 </mapper>

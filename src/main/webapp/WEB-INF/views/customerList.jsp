@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>customerList</title>
-    <link rel="stylesheet" href="<c:url value='${path}/css/menu.css'/>">
+    <link rel="stylesheet" href="<c:url value='${path}/resources/css/menu.css'/>">
 <%-- page context 이용ㅠㅠ 안되면 resource도 붙여보기,,,--%>
 </head>
 <body>
@@ -27,17 +27,14 @@
     </tr>
         <c:forEach items="${list}" var="m">
     <tr>
-        <td><a href="<c:url value="/edit?cust_no=${m.cust_no}"/>">${m.cust_no}</a></td>
+        <td><a href="/edit?cust_no=${m.cust_no}">${m.cust_no}</a></td>
         <td>${m.cust_name}</td>
         <td>${m.phone}</td>
-<%--        <td>${m.join_date}</td>--%>
         <td>${m.cust_email}</td>
         <td>${m.grade}</td>
-<%--                <td>${m.id}</td>--%>
-<%--                <td>${m.name}</td>--%>
-
     </tr>
         </c:forEach>
 </table>
+<%@include file="footer.jsp"%>
 </body>
 </html>

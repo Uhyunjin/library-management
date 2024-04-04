@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -60,14 +61,13 @@ public class CustomerController {
         }
         return "registration";
     }
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public String customerEditPost() {
-        try {
-        } catch (Exception e) {
-        }
-        return "registration";
-    } //집에서 수정
-
+//    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+//    public String customerEditPost(CustomerDto customerDto, Model m, HttpSession session) {
+//        try {
+//        } catch (Exception e) {
+//        }
+//        return "customerList";
+//    }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
 

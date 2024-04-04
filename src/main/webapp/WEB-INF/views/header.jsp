@@ -10,10 +10,12 @@
 <html>
 <head>
     <title>HEADER</title>
-    <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">
+<%--    <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">--%>
+
 </head>
 <body>
-<h1>도서 고객 및 대여관리 프로그램 V1.0</h1>
+<h1 id="title">도서 고객 및 대여관리 프로그램 V1.0</h1>
+
 <nav id="menu">
     <ul>
         <li><a href="/registration">고객등록</a></li>
