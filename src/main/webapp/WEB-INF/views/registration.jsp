@@ -38,7 +38,7 @@
         </div>
         <%--<input type="submit" value="등록">--%>
     <c:if test="${mode eq 'new'}">
-      <input type="submit" id="writeBtn">등록</input>
+      <button type="submit" id="writeBtn">등록</button>
     </c:if>
     <c:if test="${mode ne 'new'}">
       <button type="button" id="editBtn">수정</button>
