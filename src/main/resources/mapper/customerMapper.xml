@@ -25,7 +25,7 @@
                 where cust_no=#{id}
         </delete>
 
-        <insert id="insertCuntomer parameterType="CustomerDto">
+        <insert id="insertCuntomer" parameterType="CustomerDto">
                 insert into customer
                 values (#{cust_no}, #{cust_name},#{phone},#{join_date},#{cust_email},#{grade})
         </insert>
