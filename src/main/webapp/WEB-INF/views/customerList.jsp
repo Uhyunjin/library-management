@@ -11,7 +11,6 @@
 <html>
 <head>
     <title>customerList</title>
-    <script src="${path}/resources/js/test.js"></script>
     <link rel="stylesheet" href="<c:url value='${path}/css/menu.css'/>">
 <%-- page context 이용ㅠㅠ 안되면 resource도 붙여보기,,,--%>
 </head>
