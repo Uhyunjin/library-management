@@ -52,6 +52,13 @@ public class CustomerController {
         }
         return "registration";
     }
+    @PostMapping("/edit")
+    public String customer_edit() {
+        try {
+        } catch (Exception e) {
+        }
+        return "registration";
+    } //집에서 수정
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
