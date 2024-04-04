@@ -50,11 +50,13 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
-    public String customerEdit(Model m, HttpServletRequest request, Integer cust_no) {
+    public String customerEdit(Model m, Integer cust_no) {
         try {
             CustomerDto customerDto = customerDao.selectId(cust_no);
             m.addAttribute(customerDto);
+            System.out.println("customerDto = " + customerDto);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return "registration";
     }

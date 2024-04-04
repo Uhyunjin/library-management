@@ -16,7 +16,7 @@
 </head>
 <body>
 <%@ include file="header.jsp"%>
-<h1>Customer List Page</h1>
+<h1>고객 목록 조회</h1>
 <table border="1">
     <tr>
         <th>id</th>
@@ -27,7 +27,7 @@
     </tr>
         <c:forEach items="${list}" var="m">
     <tr>
-        <td><a href="/edit?cust_no=${customerDto.cust_no}">${m.cust_no}</a></td>
+        <td><a href="<c:url value="/edit?cust_no=${m.cust_no}"/>">${m.cust_no}</a></td>
         <td>${m.cust_name}</td>
         <td>${m.phone}</td>
 <%--        <td>${m.join_date}</td>--%>
