@@ -35,7 +35,7 @@
                 set cust_name = #{cust_name},
                     phone = #{phone},
                     cust_email = #{cust_email},
-                    cust_name = #{},
+                    cust_name = #{#cust_name},
                     grade = #{grade}
                 where cust_no = #{cust_no}
         </update>

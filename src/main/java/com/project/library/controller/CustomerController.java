@@ -23,13 +23,13 @@ public class CustomerController {
     @Autowired
     CustomerDao customerDao;
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public String registration(Model m) {
-        m.addAttribute("mode", "new");
-        return "registration";
-    }
+//    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+//    public String registration(Model m) {
+//        m.addAttribute("mode", "new");
+//        return "registration";
+//    }
 
-    @GetMapping("/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(){
         return "index";
     }
@@ -61,13 +61,13 @@ public class CustomerController {
         }
         return "registration";
     }
-//    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-//    public String customerEditPost(CustomerDto customerDto, Model m, HttpSession session) {
-//        try {
-//        } catch (Exception e) {
-//        }
-//        return "customerList";
-//    }
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public String customerEditPost(CustomerDto customerDto, Model m, HttpSession session) {
+        try {
+        } catch (Exception e) {
+        }
+        return "customerList";
+    }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
 
