@@ -44,7 +44,7 @@ public class CustomerController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "customerList";
+        return "index";
     }
 
     @RequestMapping(value = "/customer", method = RequestMethod.GET)
