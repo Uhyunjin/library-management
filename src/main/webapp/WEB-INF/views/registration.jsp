@@ -63,6 +63,14 @@
             if (formCheck())
                 form.submit();
         });
+        $("#writeBtn").on("click", function () {
+            let form = $("#form");
+            form.attr("action", "<c:url value='/save'/>");
+            form.attr("method", "post");
+
+            if (formCheck())
+                form.submit();
+        });
     }
   });
 </script>

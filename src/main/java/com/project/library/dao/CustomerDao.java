@@ -27,9 +27,10 @@ public class CustomerDao {
         return session.selectOne(namespace+"updateCustomer", customerDto);
     }
 
-//    public int insertUser(CustomerDto customerDto) throws Exception{
-//        return session.selectList(namespace + "insertCustomer", customerDto);
-//    }
+    public int insertUser(CustomerDto customerDto) throws Exception{
+        return session.selectOne(namespace + "insertCustomer", customerDto);
+    }
+    // 새로운 유저 등록
 
 
 }

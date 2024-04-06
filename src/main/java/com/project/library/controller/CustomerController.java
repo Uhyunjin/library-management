@@ -24,17 +24,20 @@ public class CustomerController {
     CustomerDao customerDao;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    // 고객 등록 화면 Form
     public String registration(Model m) {
         m.addAttribute("mode", "new");
         return "registration";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(){
+    // 홈화면
+    public String index() {
         return "index";
     }
 
     @RequestMapping(value = "/customer", method = RequestMethod.GET)
+    // 고객 리스트
     public String customerList(Model m, HttpServletRequest request) {
         try {
 //            List<ExDTO> list = exDAO.selectAll();
@@ -51,6 +54,7 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    // 고객 리스트에서 선택한 고객 정보를 폼 화면에서 확인
     public String customerEdit(Model m, Integer cust_no) {
         try {
             CustomerDto customerDto = customerDao.selectId(cust_no);
@@ -61,15 +65,23 @@ public class CustomerController {
         }
         return "registration";
     }
+
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    // 선택한 고객 정보 수정 post
     public String customerEditPost(CustomerDto customerDto, Model m, HttpSession session) {
         try {
         } catch (Exception e) {
         }
         return "customerList";
     }
+
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save() {
+        return "save";
+    }
+
+    @PostMapping("/save")
+    public String newUser(Model m) {
 
         return "save";
     }
