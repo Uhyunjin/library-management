@@ -15,7 +15,7 @@
 <%@ include file="header.jsp"%>
 <h1>고객 등록 화면</h1>
 <div>
-    <form method="post" action="">
+    <form method="post" action="/customer">
         <div>
             <label>고객번호</label>
             <input type="text" id="number" name="cust_no" value=${customerDto.cust_no}>
@@ -38,7 +38,7 @@
         </div>
         <%--<input type="submit" value="등록">--%>
     <c:if test="${mode eq 'new'}">
-      <button type="button" id="writeBtn">등록</button>
+      <button type="submit" id="writeBtn">등록</button>
     </c:if>
     <c:if test="${mode ne 'new'}">
       <button type="button" id="editBtn">수정</button>
@@ -63,14 +63,14 @@
             if (formCheck())
                 form.submit();
         });
-        $("#writeBtn").on("click", function () {
-            let form = $("#form");
-            form.attr("action", "<c:url value='/customer'/>");
-            form.attr("method", "post");
+        <%--$("#writeBtn").on("click", function () {--%>
+        <%--    let form = $("#form");--%>
+        <%--    form.attr("action", "<c:url value='/customer'/>");--%>
+        <%--    form.attr("method", "post");--%>
 
-            if (formCheck())
-                form.submit();
-        });
+        <%--    if (formCheck())--%>
+        <%--        form.submit();--%>
+        <%--});--%>
     }
   });
 </script>
