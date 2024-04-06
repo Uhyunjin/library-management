@@ -23,11 +23,11 @@ public class CustomerController {
     @Autowired
     CustomerDao customerDao;
 
-//    @RequestMapping(value = "/registration", method = RequestMethod.GET)
-//    public String registration(Model m) {
-//        m.addAttribute("mode", "new");
-//        return "registration";
-//    }
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public String registration(Model m) {
+        m.addAttribute("mode", "new");
+        return "registration";
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(){

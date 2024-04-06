@@ -23,7 +23,7 @@ public class CustomerDao {
         return session.selectOne(namespace + "selectId", id);
     }
 
-    public int updateCust(CustomerDto customerDto){
+    public int updateCustomer(CustomerDto customerDto){
         return session.selectOne(namespace+"updateCustomer", customerDto);
     }
 
