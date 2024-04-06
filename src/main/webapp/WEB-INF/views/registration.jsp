@@ -15,7 +15,7 @@
 <%@ include file="header.jsp"%>
 <h1>고객 등록 화면</h1>
 <div>
-    <form method="post" action="/registration">
+    <form method="post" action="">
         <div>
             <label>고객번호</label>
             <input type="text" id="number" name="cust_no" value=${customerDto.cust_no}>
