@@ -91,4 +91,14 @@ public class CustomerController {
         return "save";
     }
 
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String deleteCustomer(int cust_no) {
+        try {
+            customerDao.deleteCusomer(cust_no);
+            System.out.println("cust_no = " + cust_no);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "index";
+    }
 }

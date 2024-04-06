@@ -16,7 +16,7 @@
 <%@ include file="header.jsp"%>
 <h1>고객 등록 화면</h1>
 <div>
-    <form method="post" action="/customer">
+    <form method="" action="">
         <div>
             <input type="hidden" id="number" name="cust_no" value=${customerDto.cust_no}>
             <%--고객 번호(PK)는 자동으로 1씩 증가하면서 등록되도록 설정(입력X)--%>
@@ -42,7 +42,8 @@
       <button type="submit" id="writeBtn">등록</button>
     </c:if>
     <c:if test="${mode ne 'new'}">
-      <button type="button" id="editBtn">수정</button>
+        <button type="button" id="editBtn">수정</button>
+        <button type="button" id="deleteBtn">삭제</button>
     </c:if>
     </form>
 </div>
@@ -55,24 +56,22 @@
             form.title.focus();
             return false;
         }
-
-        $("#editBtn").on("click", function () {
-            let form = $("#form");
-            form.attr("action", "<c:url value='/edit/${customerDto.cust_no}'/>");
-            form.attr("method", "post");
-
-            if (formCheck())
-                form.submit();
-        });
-        <%--$("#writeBtn").on("click", function () {--%>
-        <%--    let form = $("#form");--%>
-        <%--    form.attr("action", "<c:url value='/customer'/>");--%>
-        <%--    form.attr("method", "post");--%>
-
-        <%--    if (formCheck())--%>
-        <%--        form.submit();--%>
-        <%--});--%>
     }
+    $("#editBtn").on("click", function () {
+        let form = $("#form");
+        form.attr("action", "<c:url value='/edit/${customerDto.cust_no}'/>");
+        form.attr("method", "post");
+
+        if (formCheck())
+            form.submit();
+    });
+    $("#deleteBtn").on("click", function () {
+        let form = $("#form");
+
+        form.attr("action", "c:url value='/delete'");
+        form.attr("method", "post");
+        form.submit();
+    });
   });
 </script>
 <%@include file="footer.jsp"%>
