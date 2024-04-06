@@ -11,6 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 </head>
 <body>
 <%@ include file="header.jsp"%>
@@ -48,6 +49,12 @@
     </form>
 </div>
 <script>
+    $(document).on({
+        click:function (e){
+            alert("클릭");
+            console.log(e.target);
+        }
+    })
   $(document).ready(function(){
     let formCheck = function() {
         let form = document.getElementById("form");
@@ -57,6 +64,7 @@
             return false;
         }
     }
+
     $("#editBtn").on("click", function () {
         let form = $("#form");
         form.attr("action", "<c:url value='/edit/${customerDto.cust_no}'/>");
@@ -67,8 +75,8 @@
     });
     $("#deleteBtn").on("click", function () {
         let form = $("#form");
-
-        form.attr("action", "c:url value='/delete'");
+        alert("클릭");
+        form.attr("action", "<c:url value='/delete'/>");
         form.attr("method", "post");
         form.submit();
     });
