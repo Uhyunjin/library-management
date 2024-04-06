@@ -17,7 +17,7 @@
 <%@ include file="header.jsp"%>
 <h1>고객 등록 화면</h1>
 <div>
-    <form method="" action="">
+    <form id="form" method="post" action="">
         <div>
             <input type="hidden" id="number" name="cust_no" value=${customerDto.cust_no}>
             <%--고객 번호(PK)는 자동으로 1씩 증가하면서 등록되도록 설정(입력X)--%>
@@ -45,16 +45,11 @@
     <c:if test="${mode ne 'new'}">
         <button type="button" id="editBtn">수정</button>
         <button type="button" id="deleteBtn">삭제</button>
+        <button type="button" id="homeBtn">홈</button>
     </c:if>
     </form>
 </div>
 <script>
-    $(document).on({
-        click:function (e){
-            alert("클릭");
-            console.log(e.target);
-        }
-    })
   $(document).ready(function(){
     let formCheck = function() {
         let form = document.getElementById("form");
@@ -73,13 +68,20 @@
         if (formCheck())
             form.submit();
     });
+
     $("#deleteBtn").on("click", function () {
         let form = $("#form");
-        alert("클릭");
         form.attr("action", "<c:url value='/delete'/>");
         form.attr("method", "post");
         form.submit();
+        alert("클릭");
     });
+      <%--$("#homeBtn").on("click", function () {--%>
+      <%--    let form = $("#form");--%>
+      <%--    form.attr("action", "<c:url value='/save'/>");--%>
+      <%--    form.attr("method", "post");--%>
+      <%--    form.submit();--%>
+      <%--});--%>
   });
 </script>
 <%@include file="footer.jsp"%>
