@@ -36,6 +36,17 @@ public class CustomerController {
         return "index";
     }
 
+    @RequestMapping(value = "/customer", method = RequestMethod.POST)
+    public String newUser(Model m, CustomerDto customerDto) {
+        try {
+            customerDao.insertUser(customerDto);
+            System.out.println("customerDto = " + customerDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "customerList";
+    }
+
     @RequestMapping(value = "/customer", method = RequestMethod.GET)
     // 고객 리스트
     public String customerList(Model m, HttpServletRequest request) {
@@ -80,9 +91,4 @@ public class CustomerController {
         return "save";
     }
 
-    @PostMapping("/save")
-    public String newUser(Model m) {
-
-        return "save";
-    }
 }

@@ -38,7 +38,7 @@
         </div>
         <%--<input type="submit" value="등록">--%>
     <c:if test="${mode eq 'new'}">
-      <button type="submit" id="writeBtn">등록</button>
+      <button type="button" id="writeBtn">등록</button>
     </c:if>
     <c:if test="${mode ne 'new'}">
       <button type="button" id="editBtn">수정</button>
@@ -65,7 +65,7 @@
         });
         $("#writeBtn").on("click", function () {
             let form = $("#form");
-            form.attr("action", "<c:url value='/save'/>");
+            form.attr("action", "<c:url value='/customer'/>");
             form.attr("method", "post");
 
             if (formCheck())
