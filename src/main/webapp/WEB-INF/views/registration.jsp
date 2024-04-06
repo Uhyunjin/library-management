@@ -45,7 +45,6 @@
     <c:if test="${mode ne 'new'}">
         <button type="button" id="editBtn">수정</button>
         <button type="button" id="deleteBtn">삭제</button>
-        <button type="button" id="homeBtn">홈</button>
     </c:if>
     </form>
 </div>
@@ -74,14 +73,8 @@
         form.attr("action", "<c:url value='/delete'/>");
         form.attr("method", "post");
         form.submit();
-        alert("클릭");
     });
-      <%--$("#homeBtn").on("click", function () {--%>
-      <%--    let form = $("#form");--%>
-      <%--    form.attr("action", "<c:url value='/save'/>");--%>
-      <%--    form.attr("method", "post");--%>
-      <%--    form.submit();--%>
-      <%--});--%>
+
   });
 </script>
 <%@include file="footer.jsp"%>
