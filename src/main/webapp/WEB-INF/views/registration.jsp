@@ -18,8 +18,8 @@
 <div>
     <form method="post" action="/customer">
         <div>
-            <label>고객번호</label>
-            <input type="text" id="number" name="cust_no" value=${customerDto.cust_no}>
+            <input type="hidden" id="number" name="cust_no" value=${customerDto.cust_no}>
+            <%--고객 번호(PK)는 자동으로 1씩 증가하면서 등록되도록 설정(입력X)--%>
         </div>
         <div>
             <label>고객이름</label>
