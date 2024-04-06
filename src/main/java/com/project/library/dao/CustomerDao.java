@@ -32,5 +32,9 @@ public class CustomerDao {
     }
     // 새로운 유저 등록
 
+    public int deleteCusomer(int cust_no) throws Exception {
+        return session.delete(namespace + "deleteId", cust_no);
+    }
+
 
 }
