@@ -81,9 +81,11 @@ public class CustomerController {
     // 선택한 고객 정보 수정 post
     public String customerEditPost(CustomerDto customerDto, Model m, HttpSession session) {
         try {
+            customerDao.updateCustomer(customerDto);
         } catch (Exception e) {
+            e.printStackTrace();
         }
-        return "customerList";
+        return "index";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)

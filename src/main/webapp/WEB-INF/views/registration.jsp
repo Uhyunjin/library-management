@@ -67,7 +67,7 @@
 
     $("#editBtn").on("click", function () {
         let form = $("#form");
-        form.attr("action", "<c:url value='/edit/${customerDto.cust_no}'/>");
+        form.attr("action", "<c:url value='/edit'/>");
         form.attr("method", "post");
         form.submit();
     });
