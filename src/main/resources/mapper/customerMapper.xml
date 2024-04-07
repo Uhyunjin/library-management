@@ -32,10 +32,9 @@
 
         <update id="updateCustomer" parameterType="CustomerDto">
                 update customer
-                set cust_name = #{cust_name},
-                    phone = #{phone},
+                set phone = #{phone},
                     cust_email = #{cust_email},
-                    cust_name = #{#cust_name},
+                    cust_name = #{cust_name},
                     grade = #{grade}
                 where cust_no = #{cust_no}
         </update>
