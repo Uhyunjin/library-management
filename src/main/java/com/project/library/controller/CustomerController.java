@@ -37,7 +37,7 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/customer", method = RequestMethod.POST)
-    public String newUser(Model m, CustomerDto customerDto) {
+    public String newCustomer(Model m, CustomerDto customerDto) {
         try {
             customerDao.insertUser(customerDto);
             System.out.println("customerDto = " + customerDto);

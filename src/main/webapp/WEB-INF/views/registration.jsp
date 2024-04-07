@@ -40,7 +40,7 @@
         </div>
         <%--<input type="submit" value="등록">--%>
     <c:if test="${mode eq 'new'}">
-      <button type="submit" id="writeBtn">등록</button>
+      <button type="button" id="writeBtn">등록</button>
     </c:if>
     <c:if test="${mode ne 'new'}">
         <button type="button" id="editBtn">수정</button>
@@ -51,21 +51,25 @@
 <script>
   $(document).ready(function(){
     let formCheck = function() {
-        let form = document.getElementById("form");
+        let form = $("#form");
         if (form.cust_name.value == "") {
             alert("제목을 입력해 주세요.");
-            form.title.focus();
             return false;
         }
     }
+
+  $("#writeBtn").on("click", function () {
+      let form = $("#form");
+      form.attr("action", "<c:url value='/customer'/>");
+      form.attr("method", "post");
+      form.submit();
+  });
 
     $("#editBtn").on("click", function () {
         let form = $("#form");
         form.attr("action", "<c:url value='/edit/${customerDto.cust_no}'/>");
         form.attr("method", "post");
-
-        if (formCheck())
-            form.submit();
+        form.submit();
     });
 
     $("#deleteBtn").on("click", function () {
