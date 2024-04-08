@@ -51,10 +51,8 @@ public class CustomerController {
     // 고객 리스트
     public String customerList(Model m, HttpServletRequest request) {
         try {
-//            List<ExDTO> list = exDAO.selectAll();
             List<CustomerDto> list = customerDao.selectAll();
             m.addAttribute("list", list);
-//            System.out.println(list);
 
         } catch (Exception e) {
             e.printStackTrace();

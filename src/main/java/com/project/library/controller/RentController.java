@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class RentController {
@@ -18,8 +19,8 @@ public class RentController {
 
     @RequestMapping(value = "/payment", method = RequestMethod.GET)
     public String totalCost(Model m) throws Exception{
-        List<Map<String, Object>> list rentDao.totalCost();
-        m.addAttribute("list", list");
+        List<Map<String, Object>> list = rentDao.totalCost();
+        m.addAttribute("list", list);
         System.out.println(list);
         return "payment";
     }
