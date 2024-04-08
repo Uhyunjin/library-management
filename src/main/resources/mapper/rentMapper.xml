@@ -8,7 +8,7 @@
                 from rent
         </select>
         <select id="totalCost" resultType="map">
-                select A.cust_no, B.cust_name, B.grade, sum(rent_price)
+                select A.cust_no, B.cust_name, B.grade, sum(rent_price) as sum
                 from rent A, customer B
                 group by cust_no
         </select>
