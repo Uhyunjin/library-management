@@ -51,20 +51,20 @@
 <script>
   $(document).ready(function(){
     let formCheck = function() {
-        let form = $("#form");
+        let form = document.getElementById("form");
         if (form.cust_name.value == "") {
-            alert("제목을 입력해 주세요.");
+            alert("이름을 입력해 주세요.");
             return false;
         }
+        return true;
     }
 
   $("#writeBtn").on("click", function () {
       let form = $("#form");
       form.attr("action", "<c:url value='/customer'/>");
       form.attr("method", "post");
-      if(formCheck()) {
+      if(formCheck())
           form.submit();
-      }
   });
 
     $("#editBtn").on("click", function () {
