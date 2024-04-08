@@ -7,4 +7,10 @@
                 select cust_no, rent_no, book_code, rent_price, rent_date
                 from rent
         </select>
-</mapper>
+        <select id="totalCost" resultType="map">
+                select A.cust_no, B.cust_name, B.grade, sum(rent_price)
+                from rent A, customer B
+                group by cust_no
+        </select>
+<!--  워크벤치에서 쿼리 체크하기  -->
+</mapper> 
