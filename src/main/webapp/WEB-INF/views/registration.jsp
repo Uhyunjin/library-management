@@ -62,7 +62,9 @@
       let form = $("#form");
       form.attr("action", "<c:url value='/customer'/>");
       form.attr("method", "post");
-      form.submit();
+      if(formCheck()) {
+          form.submit();
+      }
   });
 
     $("#editBtn").on("click", function () {
