@@ -17,7 +17,10 @@ public class RentController {
     RentDao rentDao;
 
     @RequestMapping(value = "/payment", method = RequestMethod.GET)
-    public String payment(String[] args) {
+    public String totalCost(Model m) throws Exception{
+        List<Map<String, Object>> list rentDao.totalCost();
+        m.addAttribute("list", list");
+        System.out.println(list);
         return "payment";
     }
 
