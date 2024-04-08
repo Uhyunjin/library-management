@@ -9,8 +9,9 @@
         </select>
         <select id="totalCost" resultType="map">
                 select A.cust_no, B.cust_name, B.grade, sum(rent_price) as sum
-                from rent A, customer B
-                group by cust_no
+                from rent A
+                left join customer B
+                on A.cust_no=B.cust_no
+                group by cust_no;
         </select>
-<!--  워크벤치에서 쿼리 체크하기  -->
 </mapper> 
