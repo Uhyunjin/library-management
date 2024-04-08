@@ -18,4 +18,8 @@ public class RentDao {
         return session.selectList(namespace + "selectAll");
     }
 
+    public List<Map<String, Object>> totalCost(){
+        return session.selectList(namespace + "totalCost");
+    }
+
 }
