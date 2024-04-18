@@ -1,3 +1,21 @@
+# 도서대출 관리시스템
+
+
+## 개발환경
+1. 인텔리제이
+2. STS
+3. MySQL
+4. 스프링
+5. Maven
+
+
+## 기술 세부 스택
+1. My batis
+2. MySQL Driver
+
+
+## 프로젝트 설명
+
 ![image](https://github.com/Uhyunjin/library-management/assets/98440593/23faf62a-654a-4b6f-bf00-58117d55c6c1)
 ![image](https://github.com/Uhyunjin/library-management/assets/98440593/a7c38fcf-caf2-4d79-b0e6-14cffc03cee2)
 ![image](https://github.com/Uhyunjin/library-management/assets/98440593/9d8a4c27-c4ef-4fcd-aeff-2ed05a1693a2)
